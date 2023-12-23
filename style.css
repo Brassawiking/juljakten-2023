@@ -1,17 +1,76 @@
-section:not(:first-of-type) {
-  display: none;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Rubik+Doodle+Triangles&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-section[correct] input {
-  background: green;
-  color: white;
+body {
+  margin: 0;
+  background-image: url(huset.jpeg);
+  background-position: cover;
+  background-attachment: fixed;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 50px;
+}
+
+h1, h2 {
+  margin: 0;
+  font-family: "Rubik Doodle Triangles";
+  text-align: center;
+  font-size: 48px;
+}
+
+p {
+  margin: 0;
+  font-size: 32px;
+  font-family: "Caveat";
+}
+
+
+article, section {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  -webkit-backdrop-filter: blur(4px);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 25px;
+}
+
+section:not(:first-of-type) {
+  1display: none;
 }
 
 section[correct] + section {
   display: block;
 }
 
-img {
-  width: 100%;
+input {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 48px;
+  outline: none;
+  border: 4px dashed red;
 }
+
+input::placeholder {
+  font-style: italic;
+  font-weight: 100;
+}
+
+input:focus {
+  background: gold;
+}
+
+section[correct] input {
+  background: green;
+  color: white;
+  border-color: white;
+}
+
+
 
