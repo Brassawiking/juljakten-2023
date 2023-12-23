@@ -12,7 +12,7 @@ body {
   padding: 50px;
 }
 
-body:before {
+html:before {
   content: '';
   display: block;
   position: fixed;
@@ -21,7 +21,8 @@ body:before {
   height: 100%;
   width: 100%; 
   background-image: url(huset.jpeg);
-  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: -1;
 }
 
