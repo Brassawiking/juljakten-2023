@@ -1,0 +1,17 @@
+section:not(:first-of-type) {
+  display: none;
+}
+
+section[correct] input {
+  background: green;
+  color: white;
+}
+
+section[correct] + section {
+  display: block;
+}
+
+img {
+  width: 100%;
+}
+
