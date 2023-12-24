@@ -1,4 +1,13 @@
 document.addEventListener('input', (e) => {
   const section = e.target.closest('section')
-  section.toggleAttribute('correct', section.getAttribute('answer').toLowerCase() == e.target.value?.toLowerCase())
+  const correct = section.getAttribute('answer').toLowerCase() == e.target.value?.toLowerCase()
+  if (correct) {
+    section.toggleAttribute('correct', true)
+    e.target.readOnly = true
+    requestAnimationFrame(() => {
+      section.nextElementSibling.scrollIntoView({
+        behavior: 'smooth'
+      })
+    })
+  }
 })
