@@ -52,11 +52,16 @@ article, section {
 }
 
 section:not(:first-of-type) {
-  1display: none;
+  display: none;
 }
 
 section[correct] + section {
   display: block;
+}
+
+img {
+  height: 50vh;
+  align-self: center;
 }
 
 input {
@@ -65,6 +70,7 @@ input {
   font-size: 48px;
   outline: none;
   border: 4px dashed red;
+  width: 100%;
 }
 
 input::placeholder {
